@@ -56,7 +56,6 @@ solution([10, 20, 10, 2], [10, 25, 5, -2]  )
 
 
 function permutations(string) {
-
-	return [];
+    
 }
 permutations('aabb')
