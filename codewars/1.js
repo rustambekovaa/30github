@@ -55,21 +55,21 @@
 ////////////////33333333//////////////
 
 
-function cakes(recipe, available) {
-    let a = []
-    for (i in recipe) {
-        if (!(i in available)) {
-           return 0
-        }
-        a.push(Math.floor(available[i] / recipe[i]))
-    }
-    return Math.min(...a)
+// function cakes(recipe, available) {
+//     let a = []
+//     for (i in recipe) {
+//         if (!(i in available)) {
+//            return 0
+//         }
+//         a.push(Math.floor(available[i] / recipe[i]))
+//     }
+//     return Math.min(...a)
 
 
-}
+// }
 
-console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
-console.log(cakes({ apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 }, { sugar: 500, flour: 2000, milk: 2000 }));
+// console.log(cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
+// console.log(cakes({ apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 }, { sugar: 500, flour: 2000, milk: 2000 }));
 
 
 
@@ -77,17 +77,55 @@ console.log(cakes({ apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 }, { 
 ///////////////444444444////////////////
 
 
-Math.round = function(number) {
-    return (number % 1 >= 0.5) ? number - number % 1 + 1 : number - number % 1;
-};
-Math.round(0.4)
+// Math.round = function(number) {
+//     return (number % 1 >= 0.5) ? number - number % 1 + 1 : number - number % 1;
+// };
+// Math.round(0.4)
 
-Math.ceil = function(number) {
-    return (number % 1 > 0) ? number - number % 1 + 1 : number;
-};
-Math.ceil(0.5)
+// Math.ceil = function(number) {
+//     return (number % 1 > 0) ? number - number % 1 + 1 : number;
+// };
+// Math.ceil(0.5)
 
-Math.floor = function(number) {
-    return number - number % 1;
-};
-Math.floor(0.5)
+// Math.floor = function(number) {
+//     return number - number % 1;
+// };
+// Math.floor(0.5)
+
+
+
+
+
+
+/////////55555///////////
+
+
+
+// function reverse(array){
+//     let a = []
+//     for(let i = array.length-1; i>=0; i--){
+//         a.push(array[i])
+
+//     }
+//   return a
+    
+// }
+
+// reverse([1, 2, 3])
+
+
+///////666666///////
+// function beeramid(bonus, price) {
+//     let cans = Math.floor(bonus / price);  
+//     let level = 0;
+//     let totalCans = 0;
+    
+//     while (cans >= totalCans + (level + 1) * (level + 1)) {
+//       level++;  
+//       totalCans += level * level;  
+//     }
+    
+//     return level;
+//   }
+  
+// beeramid(9, 2)
