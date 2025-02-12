@@ -129,3 +129,37 @@
 //   }
   
 // beeramid(9, 2)
+
+
+
+// function mineLocation(field){
+    let a = []
+//     field.forEach(element => {
+
+//         if(element.includes(1)){
+//            a.push(field.indexOf(element))
+//             element.forEach(element2 => {
+            
+//             if(element2 == 1){
+//                 a.push(element.indexOf(element2))
+        
+//             }
+//         })
+//         }
+//     });
+//     return a
+    
+// }
+
+// mineLocation([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]])
+
+// function mineLocation(field) {
+//     let row = field.findIndex(row => row.includes(1));
+//     let col = field[row].indexOf(1);
+//     return [row, col];
+// }
+// mineLocation([ [0, 0, 0], [0, 0, 0], [0, 1, 0] ])
+
+
+
+
