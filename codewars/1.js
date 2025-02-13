@@ -108,7 +108,7 @@
 
 //     }
 //   return a
-    
+
 // }
 
 // reverse([1, 2, 3])
@@ -119,36 +119,36 @@
 //     let cans = Math.floor(bonus / price);  
 //     let level = 0;
 //     let totalCans = 0;
-    
+
 //     while (cans >= totalCans + (level + 1) * (level + 1)) {
 //       level++;  
 //       totalCans += level * level;  
 //     }
-    
+
 //     return level;
 //   }
-  
+
 // beeramid(9, 2)
 
-
+////////77777/////////
 
 // function mineLocation(field){
-    let a = []
+// let a = []
 //     field.forEach(element => {
 
 //         if(element.includes(1)){
 //            a.push(field.indexOf(element))
 //             element.forEach(element2 => {
-            
+
 //             if(element2 == 1){
 //                 a.push(element.indexOf(element2))
-        
+
 //             }
 //         })
 //         }
 //     });
 //     return a
-    
+
 // }
 
 // mineLocation([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]])
@@ -163,3 +163,59 @@
 
 
 
+////////////////8888888///////////
+
+
+// function pigIt(str) {
+//     let sim = [',', '!', '@', '.',]
+//     let newar = []
+//     let a2 = ''
+//     let a = str.split(' ')
+//     a.forEach(element => {
+//         if (!(sim.includes(element))) {
+//             for (let i = 1; i < element.length; i++) {
+//                 a2 += element[i]
+
+//             }
+//             a2 += element[0] + 'ay' + ' '
+//         }
+//         else{
+//             a2 +=  element
+//         }
+
+//     });
+  
+//     console.log(a2);
+    
+// }
+
+// pigIt('Hello world !')
+
+
+////////////////8888888///////////2//////////////
+
+
+// function pigIt(str) {
+//     let sim = ['!', '?', '.', ',']; 
+//     return str.split(' ').map(word => {       
+//         return sim.includes(word) ? word : word.slice(1) + word[0] + 'ay';
+//     }).join(' ');
+// }
+
+// console.log(pigIt('Hello world !'));
+
+
+
+
+
+/////////999999///////////
+
+function largestSum(arr){
+    let a = arr.reduce((elem,elem2)=>{
+        return elem + elem2
+    })
+    console.log(a);
+    
+  }
+ console.log( largestSum([-1,-2,-3]));
+ 
