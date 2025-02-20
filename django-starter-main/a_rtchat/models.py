@@ -4,11 +4,10 @@ from django.contrib.auth.models import User
 
 class ChatGroup(models.Model):
     group_name = models.CharField(max_length=138, unique=True)
-
+    users_online = models.ManyToManyField(User, related_name='online_ing_roups', blank=True)
     def __str__(self):
         return self.group_name
     
-
 
 class GroupMessage(models.Model):
     group = models.ForeignKey(ChatGroup, related_name='chat_messages', on_delete=models.CASCADE)
