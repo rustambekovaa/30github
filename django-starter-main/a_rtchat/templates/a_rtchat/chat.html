@@ -11,7 +11,7 @@
             <div id="online-icon" class="gray-dot absolute top-2 left-2">
 
             </div>
-            <a href=" {% url 'profile' other_user.username  %}">
+            <a href=" {% url 'profile' other_user.username  %} ">
                 <div class="flex items-center  gap-2 p-4 sticky top-10 z-0 ">
                     <img class=" w-10 h-10 rounded-full object-cover " src="{{ other_user.profile.avatar }}" alt="">
                     <div>
@@ -21,11 +21,11 @@
                 </div>
             </a>
             {% elif chat_group.groupchat_name %}
-            <ul class="flex gap-4">
+            <ul id="groupchat-members" class="flex gap-4">
                 {% for member in chat_group.members.all%}
-                <li>
-                    <a href="url 'profile' member.username " class="flex flex-col text-gray-400 items-center justify-center w-20 gap-2"></a>
-                    <img src="{{ member.profle.avatar }}" alt="" class="w-14 h-14 rounded-full object-cover">
+                <li class="flex flex-col items-center gap-2">
+                    <a href="{% url 'profile' member.username %}" class="flex flex-col text-gray-400 items-center justify-center w-20 gap-2"></a>
+                    <img src="{{ member.profile.avatar }}" alt="" class="w-14 h-14 rounded-full object-cover flex flex-col justify-center ">
                     {{ member.profile.name|slice:":10" }}
                 </li>
                 {% endfor %}

@@ -23,6 +23,10 @@ def chat_view(request, chatroom_name = 'public-chat'):
                 other_user = memer
                 break
 
+    if chat_group.groupchat_name:
+        if request.user not in  chat_group.members.all():
+            chat_group.members.add(request.user)
+
     if request.htmx:
         form  =  ChatmessagesCreateForm(request.POST)
         if form.is_valid():
