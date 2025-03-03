@@ -90,15 +90,20 @@ class OnlineStatusConsumer(WebsocketConsumer):
     def connect(self):
         self.user = self.scope['user']
         self.group_name = 'online-status'
-        self.group = get_object_or_404(ChatGroup, group_name=self.group_name)
         
+        # Проверяем, существует ли группа
+        try:
+            self.group = ChatGroup.objects.get(group_name=self.group_name)
+        except ChatGroup.DoesNotExist:
+            self.group = ChatGroup.objects.create(group_name=self.group_name)
+
         if self.user not in self.group.users_online.all():
             self.group.users_online.add(self.user)
-            
+
         async_to_sync(self.channel_layer.group_add)(
             self.group_name, self.channel_name
         )
-        
+
         self.accept()
         self.online_status()
         
