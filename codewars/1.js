@@ -210,12 +210,135 @@
 
 /////////999999///////////
 
-function largestSum(arr){
-    let a = arr.reduce((elem,elem2)=>{
-        return elem + elem2
-    })
-    console.log(a);
+// function largestSum(arr){
+//     let a = arr.reduce((elem,elem2)=>{
+//         return elem + elem2
+//     })
+//     console.log(a);
     
-  }
- console.log( largestSum([-1,-2,-3]));
+//   }
+//  console.log( largestSum([-1,-2,-3]));
  
+
+
+// const obj1 = {
+//     result: 0
+// }
+
+// const obj2 = {
+//     result: 0
+// }
+
+// function reduceAdd(){
+//     let result = 0
+//     for(let i = 0, len = arguments.length; i < len; i++){
+//         result += arguments[i]
+//     }
+//     this.result = result
+// }
+
+// reduceAdd.apply(obj1, [1,2,3,4,5]) 
+// reduceAdd.call(obj2, 1,2,3,4,5)
+
+
+
+// const slice = Array.prototype.slice
+// function memoize(fn){
+//     const cache = {}
+//     return (...args) => {
+//         const params = slice.call(args)
+//         console.log(params)
+//         if(cache[params]){
+//             console.log('cached')
+//             return cache[params]
+//         } else{
+//             let result = fn(...args)
+//             cache[params] = result
+//             console.log('not cached')
+//             return result
+//         }
+//     }
+// }
+// const makeFullName = (fName, lName) => `${fName} ${lName}`
+// const reduceAdd = (numbers, startValue = 0) => numbers.reduce((total, cur) => total + cur, startValue)
+
+// const memoizedFullName = memoize(makeFullName)
+// const memoizeReduceAdd = memoize(reduceAdd)
+
+// memoizedFullName('Marko', 'Polo')
+// memoizedFullName('Marko', 'Polo') // не выполнится
+
+// memoizeReduceAdd([1,2,3,4],5)
+// memoizeReduceAdd([1,2,3,4],5)
+
+
+
+
+
+////Напишите функцию, которая принимает массив слов и группирует их по анаграммам.
+
+// function groupAnagrams(words) {
+//     let map = new Map();
+  
+//     for (let word of words) {
+//       let sorted = word.split('').sort().join('');
+//       if (!map.has(sorted)) {
+//         map.set(sorted, []);
+//       }
+//       map.get(sorted).push(word);
+//     }
+  
+//     return Array.from(map.values());
+//   }
+  
+//   console.log(groupAnagrams(["listen", "silent", "enlist", "rat", "tar", "art"]));
+
+
+
+
+///Напишите функцию, которая проверяет, правильно ли расставлены круглые скобки в строке.
+
+
+// function isValidParentheses(s) {
+//     let stack = [];
+//     for (let char of s) {
+//       if (char === "(") {
+//         stack.push(char);
+//       } else if (char === ")") {
+//         if (stack.length === 0) return false;
+//         stack.pop();
+//       }
+//     }
+//     return stack.length === 0;
+//   }
+  
+//   console.log(isValidParentheses("(())()")); // true
+//   console.log(isValidParentheses("(()))(")); // false
+//   console.log(isValidParentheses(")(")); // false
+  
+
+
+
+// Задача:
+// Напишите функцию, которая генерирует все возможные перестановки массива чисел.
+
+// function permute(nums) {
+//     let result = [];
+    
+//     function backtrack(path, remaining) {
+//       if (!remaining.length) {
+//         result.push(path);
+//         return;
+//       }
+      
+//       for (let i = 0; i < remaining.length; i++) {
+//         backtrack([...path, remaining[i]], [...remaining.slice(0, i), ...remaining.slice(i + 1)]);
+//       }
+//     }
+  
+//     backtrack([], nums);
+//     return result;
+//   }
+  
+//   console.log(permute([1, 2, 3]));
+  
