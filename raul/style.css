@@ -35,7 +35,7 @@
                 color: #212121;
                 font-size: 25px;
 
-             
+
                 font-weight: 400;
                 font-size: 25px;
                 line-height: 37.5px;
@@ -133,30 +133,32 @@
     /* grid-template-columns: 200px  200px ; */
     /* grid-template-columns:  3fr 1fr 1fr ; */
     /* grid-template-columns: repeat(4,1fr); */
-    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 40px 10px;
-   div{
-    background: blue;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    color: white;
-    border: 1px solid #608AF5;
-    padding: 15px;
-   }
-  
+
+    div {
+        background: blue;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        color: white;
+        border: 1px solid #608AF5;
+        padding: 15px;
+    }
+
 }
-  footer{
-    margin-top:  40px;
+
+footer {
+    margin-top: 40px;
     margin-bottom: 100px;
-  }
-
-  
+}
 
 
 
 
-  * {
+
+
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -171,7 +173,7 @@
 }
 
 
-.wrapper{
+.wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -179,39 +181,172 @@
 
 }
 
-.box{
+.box {
     width: 200px;
     height: 200px;
     border: 2px solid black;
-    transition:  all 1s ease-out; 
+    transition: all 1s ease-out;
 }
 
 
 
-.box1:hover{
+.box1:hover {
     background-color: red;
 }
 
-.box2:hover{
+.box2:hover {
     transform: rotate(10deg);
     background-color: green;
 }
 
-.box3:hover{
+.box3:hover {
     transform: scale(1.2);
     background-color: blue;
 }
 
 
-.box4:hover{
+.box4:hover {
     transform: translateX(50px);
     transform: translate(50px, 100px);
     background-color: red;
 
 }
 
-.box5:hover{
+.box5:hover {
     transform: skew(50deg);
     background-color: red;
 
+}
+
+
+.cards {
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .card {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 15px;
+        background-color: #5eff994c;
+        transition: all 0.5s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-20px);
+    }
+}
+
+.card2 {
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0px;
+    transition: background-color 0.3s ease-in-out 0;
+
+    img {
+        width: 300px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.card2:hover {
+    background-color: rgba(97, 96, 96, 0.1);
+
+    -webkit-box-shadow: 5px 15px 31px 0px rgba(195,202,235,1);
+    -moz-box-shadow: 5px 15px 31px 0px rgba(195,202,235,1);
+    box-shadow: 5px 15px 31px 0px rgba(195,202,235,1);
+}
+
+.animate-motion {
+	width: 300px;
+    margin-bottom: 90px;
+	line-height: 72px;
+	background: #E41931;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 22px;
+	padding: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	animation: animation2 5s  0s both infinite;
+}
+.animate-motion:hover {
+	animation: none;
+}
+ 
+@keyframes animation2 {
+	0%, 20% {
+		transform: translate3d(0, 0, 0);
+	}
+	10%, 14%, 18%, 2%, 6% {
+		transform: translate3d(-7px, 0, 0);
+	}
+	12%, 16%, 4%, 8% {
+		transform: translate3d(7px, 0, 0);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+ .human{ 
+    width: 400px;
+    height: 400px;
+    background: #3ac;
+    border-radius:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.eyes{
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+    animation: animation1 2s ease-in-out infinite;
+   
+}
+.eye1{
+    height: 70px;
+    width: 50px;
+    background: #000;
+    border-radius:50%;
+   
+}
+
+
+@keyframes animation1{
+    90%{ transform: none;}
+    95%{ transform: scaleY(0.2);}
+}
+
+.human:hover{
+    .human{ 
+        width: 200px;
+        height: 200px;
+    }
+    .eye1{
+        height: 45px;
+        width: 25px;
+    }
+    .eyes{
+       
+        animation: none;
+       
+    }
 }

@@ -342,3 +342,49 @@
   
 //   console.log(permute([1, 2, 3]));
   
+
+/////Удалите все дубликаты из отсортированного связного списка.
+
+function removeDuplicates(head) {
+    let current = head;
+    while (current && current.next) {
+      if (current.val === current.next.val) {
+        current.next = current.next.next;
+      } else {
+        current = current.next;
+      }
+    }
+    return head;
+  }
+  
+  function printList(head) {
+    let result = [];
+    while (head) {
+      result.push(head.val);
+      head = head.next;
+    }
+    return result;
+  }
+  
+  let head = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3)))));
+  console.log(printList(removeDuplicates(head))); // [1, 2, 3]
+  
+
+
+
+  ////Напишите функцию, которая находит подмассив с максимальной суммой (алгоритм Кадане).
+
+  function maxSubArray(nums) {
+    let maxSum = nums[0];
+    let currentSum = nums[0];
+  
+    for (let i = 1; i < nums.length; i++) {
+      currentSum = Math.max(nums[i], currentSum + nums[i]);
+      maxSum = Math.max(maxSum, currentSum);
+    }
+  
+    return maxSum;
+  }
+  
+  console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])); // 6
+  
