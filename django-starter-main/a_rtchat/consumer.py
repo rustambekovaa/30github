@@ -91,7 +91,6 @@ class OnlineStatusConsumer(WebsocketConsumer):
         self.user = self.scope['user']
         self.group_name = 'online-status'
         
-        # Проверяем, существует ли группа
         try:
             self.group = ChatGroup.objects.get(group_name=self.group_name)
         except ChatGroup.DoesNotExist:

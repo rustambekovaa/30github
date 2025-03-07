@@ -11,9 +11,7 @@
     </div>
     <nav class="block relative">
         <ul class="navitems flex items-center justify-center h-full">
-            <li x-data="{dropdownChatOpen: false}" class="relative"
-            hx-ext="ws"
-            ws-connect = "/ws/online-status/ ">
+            <li x-data="{dropdownChatOpen: false}" class="relative">
                 <a @click="dropdownChatOpen =! dropdownChatOpen" @click.away=" dropdownChatOpen = false" href="">
                     <div class="green-dot absolute top-2 right-2 z-20"></div>
                     
