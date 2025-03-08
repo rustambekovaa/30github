@@ -4,7 +4,7 @@ from django import forms
 from .models import *
 
 
-class ChatmessagesCreateForm(ModelForm):
+class ChatmessageCreateForm(ModelForm):
     class Meta:
         model = GroupMessage
         fields = ['body']
